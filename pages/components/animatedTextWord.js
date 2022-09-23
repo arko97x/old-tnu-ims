@@ -47,7 +47,7 @@ export default function AnimatedTextWord(props) {
                 initial="hidden"
                 animate="visible"
             >
-                {words.map((word, index) => (
+                {words ? words.map((word, index) => (
                     <motion.span
                         className='mr-[0.3125rem]'
                         variants={child}
@@ -55,7 +55,7 @@ export default function AnimatedTextWord(props) {
                     >
                         {word}
                     </motion.span>
-                ))}
+                )) : <></>}
             </motion.div>
         </div>
     )
