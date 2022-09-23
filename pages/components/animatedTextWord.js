@@ -2,7 +2,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 export default function AnimatedTextWord({ text, delay }) {
-    const words = text.split(" ")
+    var words = ""
+    if (typeof text === 'string') {
+        words = text.split(" ")
+    }
 
     const container = {
         hidden: { opacity: 0 },
