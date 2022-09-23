@@ -1,11 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-export default function AnimatedTextWord({ text, delay }) {
-    var words = ""
-    if (typeof text === 'string') {
-        words = text.split(" ")
-    }
+export default function AnimatedTextWord(props) {
+    var text = props.text
+    var delay = props.delay
+    var words = text.split(" ")
 
     const container = {
         hidden: { opacity: 0 },
@@ -58,4 +57,4 @@ export default function AnimatedTextWord({ text, delay }) {
             </motion.div>
         </div>
     )
-};
+}
