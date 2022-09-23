@@ -4,7 +4,9 @@ import { motion } from 'framer-motion'
 export default function AnimatedTextWord(props) {
     var text = props.text
     var delay = props.delay
-    var words = text.split(" ")
+    if (text) {
+        var words = text.split(" ")
+    }
 
     const container = {
         hidden: { opacity: 0 },
