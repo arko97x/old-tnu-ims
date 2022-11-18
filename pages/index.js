@@ -20,7 +20,7 @@ export default function Home() {
       } else if (scrolled < 45) {
         setBarBg('#D4483B');
       } else {
-        setBarBg('#04AA6D');
+        setBarBg('#2AB964');
       }
       document.getElementById("myBar").style.width = scrolled + "%";
     }
@@ -53,7 +53,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Oh, my E!</title>
-        <meta name="description" content="Don't be a trashy human. Trash your E. Responsibly." />
+        <meta name="description" content="Don't be trashy! Trash your EE responsibly." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -74,8 +74,8 @@ export default function Home() {
 
             {/* Tagline */}
             <div className='text-2xl sm:text-5xl font-light flex flex-col'>
-              <AnimatedTextWord text="Don't be a trashy human." delay={0.24} />
-              <AnimatedTextWord text='Trash your E! Responsibly.' delay={0.84} />
+              <AnimatedTextWord text="Don't be trashy!" delay={0.24} />
+              <AnimatedTextWord text='Trash your EE responsibly.' delay={0.84} />
             </div>
           </div>
 
