@@ -4,9 +4,9 @@ import Footer from './components/footer'
 import AnimatedTextWord from './components/animatedTextWord'
 import { motion } from 'framer-motion'
 import React, { useState } from 'react'
+import Script from 'next/script'
 
 export default function Home() {
-  // var barBg = '#04AA6D';
   const [barBg, setBarBg] = useState('#04AA6D');
 
   function myFunction() {
@@ -51,6 +51,7 @@ export default function Home() {
 
   return (
     <div>
+      <Script type='module' src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js' />
       <Head>
         <title>Oh, my E!</title>
         <meta name="description" content="Don't be trashy! Trash your EE responsibly." />
@@ -74,8 +75,21 @@ export default function Home() {
 
             {/* Tagline */}
             <div className='text-2xl sm:text-5xl font-light flex flex-col'>
-            <AnimatedTextWord text="Don't be trashy! Trash your EE responsibly." delay={0.24} />
+              <AnimatedTextWord text="Don't be trashy! Trash your EE responsibly." delay={0.24} />
             </div>
+          </div>
+
+          <div>
+            <model-viewer
+              // style={{ width: "71%", height: "100%", margin: "auto", zIndex: "50" }}
+              src="/GarbageBin.vox.gltf"
+              ios-src=""
+              alt=""
+              camera-controls
+              disable-zoom
+              auto-rotate
+              ar
+            ></model-viewer>
           </div>
 
           <div className='p-2 sm:p-8 flex flex-col space-y-6 bg-[#CCCCCC] rounded-xl'>
