@@ -74,8 +74,7 @@ export default function Home() {
 
             {/* Tagline */}
             <div className='text-2xl sm:text-5xl font-light flex flex-col'>
-              <AnimatedTextWord text="Don't be trashy!" delay={0.24} />
-              <AnimatedTextWord text='Trash your EE responsibly.' delay={0.84} />
+            <AnimatedTextWord text="Don't be trashy! Trash your EE responsibly." delay={0.24} />
             </div>
           </div>
 
